@@ -1,0 +1,307 @@
+body {
+    background: gray;
+}
+
+/* Navigation setting*/
+
+nav {
+    background: rgba(66,24,83,0.5);
+    display: flex;
+    flex-direction: row;
+    font-size: 2vw;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 98vw;
+}
+
+.nav:link, .nav:visited {
+    color: yellow;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.nav:hover {
+    color: red;
+    background: rgba(0,0,0,0.5);
+}
+
+.nav:active {
+    color: blue;
+}
+
+/* Header setting */
+
+header {
+    display: flex;
+    width: 98vw;
+    height: 100vh;
+
+}
+
+.background_header {
+    position: absolute;
+    z-index: -2;
+    width: 98vw;
+    top: 0;
+
+}
+
+.header_h1 {
+    font-size: 2.75vw;
+    position: relative;
+    top: 20%;
+    left: 37%;
+    color: black;
+    z-index: -1;
+}
+
+/*About me setting*/
+
+.about {
+    display: flex;
+    height: 80vh;
+
+}
+
+.my_photo {
+    width: 15vw;
+    position: absolute;
+    z-index: -1;
+    top: 160vh;
+    left: 35vw;
+}
+
+.background_about {
+    width: 30vw;
+    position: absolute;
+    z-index: -2;
+    top: 130vh;
+    left: 10vw;
+}
+
+
+.h2_about {
+    font-size: 3vw;
+    position: absolute;
+    top: 150vh;
+    left: 60vw;
+    z-index: -1;
+}
+
+.p_about {
+    font-size: 2vw;
+    position: absolute;
+    top: 160vh;
+    left: 60vw;
+    z-index: -1;
+}
+
+/* Pop-up windows setting */
+
+.window {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border: solid;
+    background: white;
+    z-index: 1;
+    position: absolute;
+    border-radius: 5vw;
+    text-align: center;
+}
+
+.window_h1 {
+    font-size: 2.5vw;
+    margin: 0.5vw;
+}
+
+.window_p {
+    margin: 0.5vw;
+}
+
+.button_close {
+    font-size: 1.5vw;
+    width: 50%;
+    margin: 0.5vw;
+    border-radius: 5vw;
+}
+
+/* Portfolio setting */
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.h2_portfolio {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 9vw;
+    font-size: 3vw;
+}
+
+.container_img_portfolio {
+    margin: 0.5vw;
+    background: silver;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio_img {
+    width: 45vw;
+}
+
+.portfolio_p {
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.open-window {
+    width: 20vw;
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+    border-radius: 2vw;
+    background: purple;
+    color: white;
+}
+
+/* Contacts setting */
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contacts_h2 {
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+}
+
+.contacts_p {
+    width: 98vw;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.container_img_contacts {
+    display: flex;
+    width: 98vw;
+    justify-content: center;
+}
+
+.img_footer {
+    width: 2.5vw;
+    margin: 0.75vw;
+}
+
+.footer {
+    width: 98vw;
+    text-align: center;
+    font-size: 1.5vw;
+    background: black;
+    color: white;
+    margin-top: 2vw;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    /* Mobile menu setting */
+
+    .mobile_nav1, .mobile_nav2, .mobile_nav3 {
+        background: black;
+        width: 6vw;
+        height: 1vw;
+        margin: 1vw 0;
+        border-radius: 2vw;
+        transition: 0.5s;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 3vh;
+        left: 3vw;
+    }
+
+    .close .mobile_nav1 {
+        transform: rotate(-45deg) translate(-1.85vw, 0.75vh);
+    }
+
+    .close .mobile_nav3 {
+        transform: rotate(45deg) translate(-1.85vw, -1vh);
+    }
+
+    .close .mobile_nav2 {
+        opacity: 0;
+    }
+
+    /* */
+
+    .nav {
+        display: none;
+    }
+
+    .close_bar {
+        display: block;
+    }
+
+    .mobile_nav1, .mobile_nav2, .mobile_nav3 {
+        display: block;
+    }
+
+    nav {
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 3vw;
+        position: absolute;
+        top: 1vw;
+
+        width: 20vw;
+        z-index: 2;
+        left: -20vw;
+        transition: all 1s linear;
+    }
+
+    .close_nav {
+        background: rgba(66,24,83,0.5);
+        position: sticky;
+        left: 0;
+        transition: all 1s linear;
+        
+    }
+
+    .nav:link, .nav:visited {
+        color: yellow;
+        text-decoration: none;
+        padding: 1vw;
+    }
+
+    .nav:hover {
+        color: red;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .nav:active {
+        color: blue;
+    }
+
+}
